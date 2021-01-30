@@ -1,3 +1,3 @@
-#Kakaotalk clone 2021
+# Kakaotalk clone 2021
 
 Clonning and customizing Kakaotalk using HTML and CSS.
