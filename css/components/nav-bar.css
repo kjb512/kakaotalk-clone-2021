@@ -19,19 +19,47 @@
   position: relative;
 }
 
+@keyframes notificationAnimation {
+  0% {
+    transform: none;
+  }
+  10% {
+    transform: translateY(-20px);
+  }
+  20% {
+    transform: none;
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  40% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  60% {
+    transform: none;
+  }
+  70% {
+    transform: translateY(-4px);
+  }
+  80% {
+    transform: none;
+  }
+  90% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: none;
+  }
+}
+
 .nav__notification {
-  background-color: tomato;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-weight: 600;
   position: absolute;
   left: 20px;
   bottom: 15px;
+  animation: notificationAnimation 3s ease-in-out infinite;
 }
 
 .nav__btn:last-child .nav__notification {

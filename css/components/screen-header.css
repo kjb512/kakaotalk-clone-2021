@@ -3,6 +3,11 @@
   justify-content: space-between;
   padding: var(--horizontal-space);
   align-items: center;
+  position: fixed;
+  top: 26px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
 }
 
 .screen-header__title {
@@ -12,4 +17,17 @@
 
 .screen-header__icons span {
   margin-left: 25px;
+}
+
+@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen-header__icons .fa-cog:hover {
+  animation: rotateCog 1s linear infinite;
 }

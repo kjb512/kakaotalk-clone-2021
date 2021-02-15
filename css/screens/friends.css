@@ -5,6 +5,7 @@
   padding: 15px 0px;
   font-size: 16px;
   margin-bottom: 5px;
+  margin-top: -15px;
 }
 
 #friends-display-link i {
@@ -17,7 +18,7 @@
 
 .friends-screen__channel {
   margin-top: 25px;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: var(--main-border);
   padding-top: 15px;
 }
 
@@ -26,4 +27,63 @@
   display: flex;
   justify-content: space-between;
   color: rgba(0, 0, 0, 0.5);
+}
+
+.friends-body {
+  margin-top: 95px;
+}
+
+@keyframes hideSplashScreen {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(0.8);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(30);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes hideSplashScreen2 {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 122px;
+  color: #b5c7d3;
+  animation: hideSplashScreen2 3s ease-in-out forwards;
+}
+
+#splash-screen i {
+  animation: hideSplashScreen 3s ease-in-out forwards;
 }
